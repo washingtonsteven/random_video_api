@@ -40,4 +40,5 @@ start(channelName)
 ## Upcoming Features
 1. Re-scrape Youtube after a certain period of time (requires update to `youtube_video_list` as well)
 2. Ability to supply `YOUTUBE_API_KEY` into this function (`start`)
+3. Auto-call `end()`
 
