@@ -22,7 +22,7 @@ npm install // or yarn install
 ## Use
 
 ```javascript
-const { start, end } = require('random_video_api);
+const { start, end } = require('random_video_api');
 
 const channelName = 'esaevian';
 start(channelName)
