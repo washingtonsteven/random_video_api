@@ -1,0 +1,14 @@
+#!/usr/bin/env/node
+
+const { start, end } = require('../index');
+
+start('esaevian')
+  .then(results => {
+    console.log('== got results ==');
+    console.log(JSON.stringify(results, null, 1));
+    end();
+  })
+  .catch(err => {
+    console.error(err);
+    return;
+  });

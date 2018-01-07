@@ -1,0 +1,15 @@
+{
+  "name": "random_video_api",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bin/start"
+  },
+  "author": "Steven Washington",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "mysql": "^2.15.0"
+  }
+}
