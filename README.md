@@ -6,18 +6,9 @@ Pulls video info for a Youtube channel's uploads from a MySQL database, automati
 
 Clone the repo.
 
-Currently (2017-01-06), this uses [`youtube_video_list`](http://github.com/washingtonsteven/youtube_video_list) as a git submodule instead of an npm module. So you should pull that down:
+Then run `yarn install` (or `npm install`)
 
-```
-git submodule update --recursive --remote
-```
-
-Then pull in its dependencies:
-
-```
-cd youtube_video_list
-npm install // or yarn install
-```
+NB: This should also install the module [`washingtonsteven/youtube_video_list`](http://github.com/washingtonsteven/youtube_video_list) via Github vs. NPM. 
 
 ## Use
 
@@ -37,8 +28,24 @@ start(channelName)
   })
 ```
 
+## Database
+
+Currently using MySQL:
+
+| Database: random_videos |
+|-------------------------|
+
+| Table: channels |   |
+|-----------------|---|
+| **channelName**:VARCHAR(255) PRIMARY | **lastScraped**:DATETIME |
+
+| Table: videos |   |   |   |   |   |
+|---------------|---|---|---|---|---|
+| **title**:TEXT | **description**:TEXT | **thumbs**:TEXT | **channelTitle**:TEXT | **videoID**:VARCHAR(255) PRIMARY | **publishedAt**:DATETIME |
+
 ## Upcoming Features
-1. Re-scrape Youtube after a certain period of time (requires update to `youtube_video_list` as well)
-2. Ability to supply `YOUTUBE_API_KEY` into this function (`start`)
-3. Auto-call `end()`
+1. Supply DB credentials (instead of being hardcoded)
+2. Re-scrape Youtube after a certain period of time (requires update to `youtube_video_list` as well)
+3. Ability to supply `YOUTUBE_API_KEY` into this function (`start`)
+4. Auto-call `end()`
 

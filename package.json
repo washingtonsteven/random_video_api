@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^4.0.0",
-    "mysql": "^2.15.0"
+    "mysql": "^2.15.0",
+    "youtube_video_list": "washingtonsteven/youtube_video_list"
   }
 }

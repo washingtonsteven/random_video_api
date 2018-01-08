@@ -1,7 +1,7 @@
 require('dotenv').config();
 const mysql = require('mysql');
 const { connection, query } = require('./db/db');
-const youtube_video_list = require('./youtube_video_list');
+const youtube_video_list = require('youtube_video_list');
 
 module.exports.start = channelName => {
   const channelQuery = mysql.format('SELECT * FROM channels WHERE channelName = ?', [channelName]);
